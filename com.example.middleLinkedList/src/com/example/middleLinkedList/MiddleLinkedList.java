@@ -1,7 +1,6 @@
 package com.example.middleLinkedList;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class MiddleLinkedList {
@@ -15,8 +14,26 @@ public class MiddleLinkedList {
 		linkedList.addNode(new Node("4"));
 		linkedList.addNode(new Node("5"));
 
+		Node head = linkedList.getHead();
+		Node current = head;
+		Node middle = head;
+		int length = 0;
+
+		while (current.next != null) {
+			length++;
+			if (length % 2 == 0) {
+				middle = middle.next;
+			}
+			current = current.next;
+		}
+
+		if (length % 2 == 1) {
+			middle = middle.next;
+		}
+
+		System.out.println("length of LinkedList: " + length);
+		System.out.println("middle element of LinkedList : " + middle);
+
 	}
-	
-	
 
 }
