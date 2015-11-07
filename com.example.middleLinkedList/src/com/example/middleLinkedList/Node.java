@@ -5,7 +5,6 @@ public final class Node {
 	String value;
 	Node next;
 	
-	
 	public Node(String value, Node next) {
 		this.value = value;
 		this.next = next;
@@ -20,8 +19,5 @@ public final class Node {
 	public String toString() {
 		return "Node [value=" + value + "]";
 	}
-	
-	
-	
 
 }
