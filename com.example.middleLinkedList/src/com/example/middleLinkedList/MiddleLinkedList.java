@@ -1,20 +1,17 @@
 package com.example.middleLinkedList;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MiddleLinkedList {
 
 	public static void main(String[] args) {
-		List<Node> list = new ArrayList<>();
-		LikedList linkedList = new LikedList();
-		linkedList.addNode(new Node("1"));
-		linkedList.addNode(new Node("2"));
-		linkedList.addNode(new Node("3"));
-		linkedList.addNode(new Node("4"));
-		linkedList.addNode(new Node("5"));
+		LikedList sList = new LikedList();
+		sList.insertFront("1");
+		sList.insertFront("2");
+		sList.insertFront("3");
+		sList.insertFront("4");
+		sList.insertFront("5");
+		sList.insertFront("6");
 
-		Node head = linkedList.getHead();
+		Node head = sList.getHead();
 		Node current = head;
 		Node middle = head;
 		int length = 0;
@@ -31,8 +28,9 @@ public class MiddleLinkedList {
 			middle = middle.next;
 		}
 
-		System.out.println("length of LinkedList: " + length);
-		System.out.println("middle element of LinkedList : " + middle);
+		System.out.println("Size of sList: " + sList.getSize());
+		System.out.println("Middle element of sList: " + middle);
+		System.out.println("nth node in the sList: " + sList.getHead().nth(3));
 
 	}
 

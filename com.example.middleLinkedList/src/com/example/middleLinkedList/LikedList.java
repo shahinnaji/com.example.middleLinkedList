@@ -3,19 +3,23 @@ package com.example.middleLinkedList;
 public class LikedList {
 
 	private Node head;
-	private Node tail;
+	private int size;
 
 	public LikedList() {
-		head = new Node("Head");
-		tail = head;
+		head = null;
+		size = 0;
 	}
 
 	Node getHead() {
 		return head;
 	}
 
-	void addNode(Node node) {
-		tail.next = node;
-		tail = node;
+	public int getSize() {
+		return size;
+	}
+
+	public void insertFront(String item) {
+		head = new Node(item, head);
+		size++;
 	}
 }
